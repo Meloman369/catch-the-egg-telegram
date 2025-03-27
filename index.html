@@ -65,7 +65,7 @@
   </div>
 
   <div class="footer">
-    developed by <a href="https://github.com/shtange">MelomanW12</a>
+    developed by <a href="https://github.com/shtange">Yurii Shtanhei</a>
   </div>
 
   <script src="js/comfy.js"></script>
@@ -77,6 +77,8 @@
   document.addEventListener('DOMContentLoaded', function() {
     const webApp = window.Telegram.WebApp;
     webApp.ready();
+    console.log('Telegram Web App API is ready!');
+    document.title = 'Mini App Запущена!';
 
     // Получение информации о пользователе (необязательно)
     const user = webApp.initDataUnsafe?.user;
