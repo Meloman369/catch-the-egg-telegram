@@ -34,23 +34,23 @@
 
       <div class="more-info">
         <div class="how-to-play" id="how-to-play-button">How to play</div>
-        <div id="how-to-play-modal" class="modal">
-            <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <h3>Как играть:</h3>
-                <p>Управляйте волком, чтобы ловить яйца, которые падают из-под кур.</p>
-                <p>Для перемещения волка используйте сенсорные кнопки:</p>
-                <ul>
-                    <li><b>Q</b> (верхняя левая)</li>
-                    <li><b>A</b> (нижняя левая)</li>
-                    <li><b>E</b> (верхняя правая)</li>
-                    <li><b>D</b> (нижняя правая)</li>
-                </ul>
-                <p>За каждое пойманное яйцо вы получаете очки.</p>
-                <p>Если вы пропустите 3 яйца, игра закончится.</p>
-                <p>Наберите 1000 очков, чтобы выиграть!</p>
-            </div>
-        </div>
+        <div id="how-to-play-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Как играть:</h3>
+                <p>Управляйте волком, чтобы ловить яйца, которые падают из-под кур.</p>
+                <p>Для перемещения волка используйте сенсорные кнопки:</p>
+                <ul>
+                    <li><b>Q</b> (верхняя левая)</li>
+                    <li><b>A</b> (нижняя левая)</li>
+                    <li><b>E</b> (верхняя правая)</li>
+                    <li><b>D</b> (нижняя правая)</li>
+                </ul>
+                <p>За каждое пойманное яйцо вы получаете очки.</p>
+                <p>Если вы пропустите 3 яйца, игра закончится.</p>
+                <p>Наберите 1000 очков, чтобы выиграть!</p>
+            </div>
+        </div>
         <a href="/catch-the-egg/" class="restart-game">Restart</a>
       </div>
 
@@ -96,29 +96,29 @@
       })
       .show();
 
-    // Обработка открытия модального окна "How to play"
-    const howToPlayButton = document.getElementById('how-to-play-button');
-    const modal = document.getElementById('how-to-play-modal');
-    if (howToPlayButton && modal) {
-      howToPlayButton.addEventListener('click', function() {
-        modal.style.display = "block";
-      });
+    // Обработка открытия модального окна "How to play"
+    const howToPlayButton = document.getElementById('how-to-play-button');
+    const modal = document.getElementById('how-to-play-modal');
+    if (howToPlayButton && modal) {
+      howToPlayButton.addEventListener('click', function() {
+        modal.style.display = "block";
+      });
 
-      // Обработка закрытия модального окна по нажатию на крестик
-      const closeButton = modal.querySelector('.close-button');
-      if (closeButton) {
-        closeButton.addEventListener('click', function() {
-          modal.style.display = "none";
-        });
-      }
+      // Обработка закрытия модального окна по нажатию на крестик
+      const closeButton = modal.querySelector('.close-button');
+      if (closeButton) {
+        closeButton.addEventListener('click', function() {
+          modal.style.display = "none";
+        });
+      }
 
-      // Обработка закрытия модального окна при клике снаружи него
-      window.addEventListener('click', function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      });
-    }
+      // Обработка закрытия модального окна при клике снаружи него
+      window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
   });
 </script>
 </body>
